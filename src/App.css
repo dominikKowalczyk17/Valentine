@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: auto;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.valentine {
+  margin-top: 20px;
+  position: relative;
+  background: url("./assets/zdj.jpg") center/cover no-repeat;
+  width: 300px; /* Ustaw szerokość taką, jak szerokość GIFa */
+  height: 300px; /* Ustaw wysokość taką, jak wysokość GIFa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: glitterAnimation 1s infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes glitterAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("assets/heart.jpeg") center/cover no-repeat;
+  animation: heartAnimation 2s linear infinite;
+}
+
+@keyframes heartAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-600px) rotate(360deg);
+  }
+}
+
+.image {
+  background: url("./assets/nie.png") center/cover no-repeat;
+  width: 300px;
+  height: 300px;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
